@@ -38,5 +38,5 @@ thop  # FLOPs computation
 # pycocotools>=2.0  # COCO mAP
 # roboflow
 
-yaml~=0.2.5
+pyyaml
 pytesseract~=0.3.10

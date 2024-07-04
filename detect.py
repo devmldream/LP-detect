@@ -79,7 +79,7 @@ def detect(model, image, device, imgsz=640, conf_thres=0.25,
 
 
 def main():
-    weights = 'LP_detect_yolov7_500img.pt'
+    weights = 'yolov7.pt'
     if torch.cuda.is_available():
         device = torch.device("cuda")
     else:

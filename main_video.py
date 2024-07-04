@@ -10,8 +10,8 @@ from utils_LP import character_recog_CNN, crop_n_rotate_LP
 Min_char = 0.01
 Max_char = 0.09
 video_path = 'data/video/clip3.2.mp4'
-CHAR_CLASSIFICATION_WEIGHTS = './src/weights/weight.h5'
-LP_weights = 'LP_detect_yolov7_500img.pt'
+CHAR_CLASSIFICATION_WEIGHTS = './src/weights/densenet121_weights_tf_dim_ordering_tf_kernels.h5'
+LP_weights = 'yolov7.pt'
 
 model_char = CNN_Model(trainable=False).model
 model_char.load_weights(CHAR_CLASSIFICATION_WEIGHTS)
