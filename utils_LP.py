@@ -11,8 +11,8 @@ ALPHA_DICT = {0: 'A', 1: 'B', 2: 'C', 3: 'D', 4: 'E', 5: 'F', 6: 'G', 7: 'H', 8:
 
 def create_yaml():
     data_yaml = dict(
-        train='../input/vietnamese-license-plate/train',
-        val='../input/vietnamese-license-plate/valid',
+        train='../input/train',
+        val='../input/valid',
         nc=1,
         names=['License Plate']
     )
@@ -50,7 +50,7 @@ def crop_n_rotate_LP(source_img, x1, y1, x2, y2):
     h = int(y2 - y1)
     ratio = w / h
     # print ('ratio',ratio)
-    if 0.8 <= ratio <= 1.5 or 3.5 <= ratio <= 6.5:
+    if 0.8 <= ratio <= 1.5 or 3.0 <= ratio <= 6.5:
         cropped_LP = source_img[y1:y1 + h, x1:x1 + w]
         cropped_LP_copy = cropped_LP.copy()
         # cv2.imwrite('doc/cropped_LP2.png',cropped_LP)
